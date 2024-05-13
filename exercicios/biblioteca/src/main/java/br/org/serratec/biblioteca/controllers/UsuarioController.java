@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.org.serratec.biblioteca.entities.Usuario;
+import br.org.serratec.biblioteca.services.PerfilService;
 import br.org.serratec.biblioteca.services.UsuarioService;
 
 
@@ -44,7 +45,7 @@ public class UsuarioController {
 	
 	@PostMapping
 	public ResponseEntity<Usuario> save(@RequestBody Usuario usuario) {
-		return new ResponseEntity<>(usuarioService.save(usuario), HttpStatus.CREATED);
+		return new ResponseEntity<>(usuarioService.save(usuario),HttpStatus.CREATED);
 	}
 	
 	@PutMapping

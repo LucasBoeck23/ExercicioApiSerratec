@@ -75,10 +75,9 @@ public class Usuario {
 		this.user_password = user_password;
 	}
 	
-	public String getPerfil() {
-        return perfil.getNome();
+	public Integer getPerfil() {
+    return perfil.getPerfilId();
     }
-
 }
 
 
